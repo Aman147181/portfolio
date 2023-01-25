@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"class="scroll-smooth md:scroll-auto">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color:rgb(240,240,240)">
- 
+<body style="background-color:rgb(30,41,59)">
     <div class="flex justify-center  bg-no-repeat  bg-cover h-full md:bg-center">
 
         <div class="flex flex-col items-center ">
-            <nav class="self-center w-full max-w-7xl ">
-                <div
-                    class="flex md:flex-row flex-col justify-between items-center md:items-start border-b-2 border-blue-900">
-                </div>
-            </nav>
             <div class="flex flex-col justify-center items-center text-center  max-w-7xl   my-8 py-4 px-10">
                 
                 <div class="flex flex-col text-gray-700mt-5">
-                    <h1 class="text-4xl md:text-[50px] font-semibold">Hey there! I'm Aman Shrestha</h1>
-                    <p class="text-xl mt-2 md:mt-4 tracking-wide">Engineer - Developer - Freelancer</p>
+                    <h1 class="text-4xl md:text-[50px] font-semibold text-teal-400">Hey there! I'm Aman Shrestha</h1>
+                    <p class="text-xl mt-2 md:mt-4 tracking-wide text-white">Engineer - Developer - Freelancer</p>
                 </div>
-                <p class="mt-4 text-sm md:w-[52%] tracking-wide leading-7">Innovative web developer with a passion for creating intuitive, user-friendly websites</p>
+                <p class="mt-4 text-sm md:w-[52%] tracking-wide leading-7 text-white">Innovative web developer with a passion for creating intuitive, user-friendly websites</p>
                
                
                 <div class="space-x-3 mt-6 md:mt-4 text-white">
@@ -39,18 +33,18 @@
 
 
                <br><br><br>
-                <h1 class="text-5xl md:text-50 font-semibold">My Works</h1><br><br>
+                <h1 class="text-5xl md:text-50 font-semibold text-teal-400">My Works</h1><br><br>
                     
                     <div class="flex justify-center">
                         <div class="flex flex-col md:flex-row max-w-7xl justify-center items-center">
 
                             {% for project in projects %}
-                             <div class="overflow-hidden w-3/4 md:w-1/3 bg-white m-4 shadow-sm flex flex-col justify-center shadow-lg hover:bg-gray-200">
+                             <div class="overflow-hidden w-3/4 md:w-1/3 m-4 shadow-lg flex flex-col justify-center shadow-lg hover:bg-slate-700">
                                 <div class="h-26 w-full overflow-hidden "> <img src="{{project.thumbnail}} "
                                         alt="" class="w-320 hover:scale-110 transition duration-500 ease-in-out" /> </div>
-                                <div class="font-bold text-lg text-black m-2">{{project.name}}</div>
-                                <div class="text-gray-500 m-2 text-sm">{{project.description|truncatewords:30}}</div>
-                                <a href="{% url 'project_detail' pk=project.pk %}" class="text-blue-500 hover:text-blue-800">Learn more <span class="sr-only"></span>
+                                <div class="font-bold text-lg text-teal-400 m-2">{{project.name}}</div>
+                                <div class="text-gray-200 m-2 text-sm">{{project.description|truncatewords:20}}</div>
+                                <a href="{% url 'project_detail' pk=project.pk %}" class="text-blue-500 hover:text-blue-800">View project <span class="sr-only"></span>
                                     <span class="text-blue-500 hover:text-blue-800::before">
                                       <svg class="h-3 w-3 inline" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
